@@ -14,7 +14,7 @@ class Level8 {
     this.end = false;
     this.startTime = millis();
     this.score = 0;
-    this.countDown = 1*1000;
+    this.countDown = 10*1000;
     this.blink2 = 50;
     this.clock = images['clock'];
   }
@@ -29,7 +29,7 @@ class Level8 {
     this.clothes = [];
     this.step = 0;
     this.end = false;
-    this.countDown = 1*1000;
+    this.countDown = 10*1000;
     this.blink2 = 50;
   }
 
