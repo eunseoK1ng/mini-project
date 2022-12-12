@@ -78,7 +78,7 @@ class Level12 {
             image(this.endText2, 0, -75);
     
         }
-        else if(this.score <= 15 && this.earnedCloth == 4){
+        else if(this.score <= 15 && this.earnedCloth < 4){
             if (!this.end3.isPlaying()){
                 this.end3.play();
                 // image(this.end3Img, 0, 0);
@@ -88,7 +88,7 @@ class Level12 {
                 image(this.end3Img[this.index % 3], 0, 0);
                 this.index++;
             }
-            image(this.endText3, 0, -500);
+            image(this.endText3, 0, -450);
     
         }
         else if(this.score > 15 && this.earnedCloth < 4){

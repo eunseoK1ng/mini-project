@@ -11,7 +11,7 @@ class Level6 {
     this.desImg = images['des'];
     // params
     this.end = false;
-    this.countDown = 20 * 1000;
+    this.countDown = 18 * 1000;
     // this.startTime = 0;
     this.startTime = millis();
     // items
@@ -34,7 +34,7 @@ class Level6 {
 
   init(score){
     this.end = false;
-    this.countDown = 20 * 1000;
+    this.countDown = 18 * 1000;
     this.score = score;
     this.startTime = millis();
     this.items = [];
