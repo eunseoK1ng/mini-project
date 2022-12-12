@@ -10,16 +10,16 @@ class Clothes{
   initPosSpeed(){
     this.pos = [int(random(0, 2))*width, int(random(height-100, height))];
     if(this.pos[0] == 0){
-      this.speed = [random(8, 13), random(-23, -8)];
+      this.speed = [random(6, 11), random(-21, -6)];
     }else{
-      this.speed = [-random(8, 13), random(-23, -8)];
+      this.speed = [-random(6, 11), random(-21, -6)];
     }
   }
   
 	move(){
     this.pos[0] += this.speed[0]
 	  this.pos[1] += this.speed[1];
-    this.speed[1] += 0.8;
+    this.speed[1] += 0.5;
 	}
 
   isEarned(){

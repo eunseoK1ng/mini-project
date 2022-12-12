@@ -1,32 +1,28 @@
 class Level7 {
-    constructor(images, sounds) {
-        // this.cam = createCapture(VIDEO);
-        this.stage3 = sounds['stage3'];
-        this.item = sounds['item'];
-        this.camTest = images['camTest'];
-        this.miniImg = images['lev3mini'];
-        this.threshold = 40;
-        this.cntThreshold = 30;
-        this.miniPos = [999, 999];
-        this.end = false;
-        this.step = 0;
-        this.miniCol = new Collider(this.miniPos[0], this.miniPos[1], 100, 160);
-        this.score = 0;
-    }
-    
-    init(score){
-      this.score = score;
+    constructor(images, sounds){
+      this.end0Img = images['end0'];
+      this.end1 = sounds['end1'];
       this.end = false;
-      this.miniCol = new Collider(this.miniPos[0], this.miniPos[1], 100, 160);
-      this.miniPos = [999, 999];
-      this.step = 0;
-      this.threshold = 40;
-      this.cntThreshold = 30;
+      this.score = 0;
+      this.originalScore = 0;
+      this.earnedCloth = 0;
+      this.showend = false;
+      this.end0 = sounds['end0'];
+      this.stage3 = sounds['stage3'];
+      this.intro0 = images['intro0'];
+      this.intro1 = images['intro1'];
     }
-
-
+  
+    init(score){
+      this.end = false;
+      this.earnedCloth = score % 10;
+      this.originalScore = score;
+      this.score = score;
+      this.showend = false;
+    }
+  
     getScore(){
-      return this.score;
+      return this.originalScore;
     }
   
     isEnd(){
@@ -38,66 +34,25 @@ class Level7 {
     }
   
     clickEvent(){
-        this.end = true;
+      // this.end0.stop();
+      this.end = true;
+      // this.end1.play();
+      // imageMode(CORNER);
+      // images(this.end1Img[0], 0, 0);
+      // if (!this.end1.isPlaying()){
+      //     this.end1.play();
+      // }
     }
   
     display(){
-      // this.cam.size(width, height);
-      // // pixelDensity(1);
-      // this.cam.hide();
-
-            if(!this.stage3.isPlaying()){
-              this.stage3.play();
-            }
-
-
-            // camera
-           video.loadPixels();
-            let sumx = 0;
-            let sumy = 0;
-            let count = 0;
-            for(let y = 0; y <video.height; y++){
-              for(let x = 0; x <video.width; x++){
-                let index = (y *video.width + x) * 4;
-                let r =video.pixels[index + 0];
-                let g =video.pixels[index + 1];
-                let b =video.pixels[index + 2];
-                let a =video.pixels[index + 3];
-                let redity = r - (g + b)/2;
-                if(redity > this.threshold){
-                  sumx += x;
-                  sumy += y;
-                  count ++;
-                }
-              }
-            }
-            
-            imageMode(CORNER);
-            push();
-            translate(width, 0);
-            scale(-1, 1);
-            image(video, 0, 0);
-            pop();
-        
-            // draw background
-            image(this.camTest, 0, 0);
-        
-            // draw mini
-            push();
-            translate(width, 0);
-            scale(-1, 1);
-            if(count > this.cntThreshold){
-              imageMode(CENTER);
-              this.miniPos[0] = int((sumx)/count);
-              this.miniPos[1] = int((sumy)/count);
-              this.miniCol.update(width-this.miniPos[0], this.miniPos[1]);
-              image(this.miniImg[0], this.miniPos[0], this.miniPos[1]);
-            }else{
-              this.miniCol.update(999, 999);
-            }
-            pop();
-        
-        
-    
+      // if(!this.end0.isPlaying()){
+      //   this.end0.play();
+      // }
+      imageMode(CORNER);
+      image(this.end0Img, 0, 0);
+      if (mouseX <= 772 && mouseX >= 708 && mouseY >= 512 && mouseY <= 570) {
+        image(this.intro1, 0, 0);
       }
-}
+  
+    }
+  }

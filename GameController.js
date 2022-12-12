@@ -35,11 +35,17 @@ class GameController {
         stroke(66, 50, 24);
         strokeWeight(5);
         text('현재 몸무게 : ' + this.score + 'kg', width/2-150, 40);
-        fill(238, 112, 112);
+        fill(243, 212, 177);
         text(this.score, width/2+30, 40);
     }
 
     drawScore2(){
+        textSize(70);
+        textFont(this.nowKg);
+        fill(255);
+        stroke(66, 50, 24);
+        strokeWeight(5);
+        text('최종 몸무게', width/2-170, 80);
         textSize(70);
         textFont(this.digital);
         fill(253, 245, 20);
@@ -47,6 +53,21 @@ class GameController {
         strokeWeight(1);
         let finalScore = (this.score-this.score%10)/100;
         text(finalScore, width/2-130, height/2+15);
+    }
+
+    drawScore3(){
+        textSize(70);
+        textFont(this.nowKg);
+        fill(255);
+        stroke(66, 50, 24);
+        strokeWeight(5);
+        text('현재 몸무게', width/2-170, 80);
+        textSize(70);
+        textFont(this.digital);
+        fill(253, 245, 20);
+        stroke(253, 245, 20);
+        strokeWeight(1);
+        text(this.score, width/2-130, height/2+15);
     }
 
     drawReturnButton(){
@@ -76,12 +97,16 @@ class GameController {
             this.drawSkip();
         }
 
-        if (this.stage == 3 || this.stage == 5){
+        if (this.stage == 3 || this.stage == 6){
             this.drawScore1();
         }
-        if (this.stage == 9){
+        if (this.stage == 4 || this.stage == 7){
+            this.drawScore3();
+        }
+        if (this.stage == 11){
             this.drawScore2();
         }
+
         // return button
         if(this.stage == this.levels.length -1){
             this.drawReturnButton();

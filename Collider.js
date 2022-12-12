@@ -44,6 +44,7 @@ class Collider{
   display(){
     noFill();
     stroke(255, 0, 0);
+    strokeWeight(2);
     rectMode(CORNER);
     // rect(this.x1, this.y1, this.lenX, this.lenY);
   }

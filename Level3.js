@@ -99,17 +99,17 @@ class Level3 {
   updateCheckPoint(){
     switch(this.checkpoint){
       case -1:
-        if(this.miniCollider.isCollide(this.point0)){
+        if(this.miniCollider.isCollide(this.point0) && this.start){
           this.checkpoint += 1;
           this.score -= 1;
           this.checkpointTime[0] = millis();
         }
         break;
       case 0:
-        if(millis() - this.checkpointTime[0] < 1000){
+        if(millis() - this.checkpointTime[0] < 1000 && this.start){
           push();
           translate(mouseX, mouseY);
-          image(this.minus, -40, -60);
+          image(this.minus, -40, -80);
           pop();
         }
         if(this.miniCollider.isCollide(this.point1)){
@@ -119,10 +119,10 @@ class Level3 {
         }
         break;
       case 1:
-        if(millis() - this.checkpointTime[1] < 1000){
+        if(millis() - this.checkpointTime[1] < 1000 && this.start){
           push();
           translate(mouseX, mouseY);
-          image(this.minus, -40, -60);
+          image(this.minus, -40, -80);
           pop();
         }
         if(this.miniCollider.isCollide(this.point2)){
@@ -132,10 +132,10 @@ class Level3 {
         }
         break;
       case 2:
-        if(millis() - this.checkpointTime[2] < 1000){
+        if(millis() - this.checkpointTime[2] < 1000 && this.start){
           push();
           translate(mouseX, mouseY);
-          image(this.minus, -40, -60);
+          image(this.minus, -40, -80);
           pop();
         }
         if(this.miniCollider.isCollide(this.point3)){
@@ -144,13 +144,14 @@ class Level3 {
           this.checkpointTime[3] = millis();
         }
       case 3:
-        if(millis() - this.checkpointTime[3] < 1000){
+        if(millis() - this.checkpointTime[3] < 1000 && this.start){
           push();
           translate(mouseX, mouseY);
-          image(this.minus, -40, -60);
+          image(this.minus, -40, -80);
           pop();
         }
         break;
+        
     }
   }
 
@@ -161,7 +162,7 @@ class Level3 {
     this.pathCollider.push(new Collider(490, 360, 690, 84));
     this.pathCollider.push(new Collider(341, 561, 609, 72));
     this.pathCollider.push(new Collider(341, 561, 609, 72));
-    this.pathCollider.push(new Collider(770, 504, 45, 185));
+    this.pathCollider.push(new Collider(780, 504, 45, 185));
   }
 
   isEnd(){
@@ -342,6 +343,9 @@ class Level3 {
     this.point1.display();
     this.point2.display();
     this.point3.display();
+    // this.point4.display();
+    // this.point5.display();
+    // this.point6.display();
 
     // mini
     this.drawMini();

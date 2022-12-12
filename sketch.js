@@ -80,13 +80,13 @@ function preload(){
   }
   images['blink'] = blinkImgs
   let sceneImgs = [];
-  for(i = 0; i < 10; i++){
+  for(i = 0; i < 11; i++){
     sceneImgs[i] = loadImage("assets/img"+i+".jpg");
   }
   images['scene'] = sceneImgs;
 
-  // images['doctor'] = docImgs
   // let docImgs = [];
+  // images['doctor'] = docImgs
   // for(i = 0; i < 5; i++){
   //   docImgs[i] = loadImage("assets/doc"+i+".jpg");
   // }
@@ -148,27 +148,38 @@ function preload(){
   let end3 = [];
   let end4 = [];
   images['end0'] = loadImage("assets/end0.png");
-  images['test'] = loadImage("assets/end1_0.png");
+  // images['test'] = loadImage("assets/end1_0.png");
 
   end1[0] = loadImage("assets/end1_0.png");
   end1[1] = loadImage("assets/end1_1.png");
   images['end1'] = end1
+  images['endText1'] = loadImage("assets/endText0.png");
 
   end2[0] = loadImage("assets/end2_0.jpg");
   end2[1] = loadImage("assets/end2_1.jpg");
   end2[2] = loadImage("assets/end2_2.jpg");
   images['end2'] = end2
+  images['endText2'] = loadImage("assets/endText3.png");
 
   end3[0] = loadImage("assets/end3_0.jpg");
   end3[1] = loadImage("assets/end3_1.jpg");
   end3[2] = loadImage("assets/end3_2.jpg");
   images['end3'] = end3
+  images['endText3'] = loadImage("assets/endText2.png");
 
-  end4[0] = loadImage("assets/end4_0.jpg");
-  end4[1] = loadImage("assets/end4_gang.jpg");
-  end4[2] = loadImage("assets/end4_mini.jpg");
+  end4[0] = loadImage("assets/end4_0.png");
+  end4[1] = loadImage("assets/end4_1.png");
+  end4[2] = loadImage("assets/end4_2.png");
+  end4[3] = loadImage("assets/end4_3.png");
+  end4[4] = loadImage("assets/end4_4.png");
+  end4[5] = loadImage("assets/end4_5.png");
+  end4[6] = loadImage("assets/end4_6.png");
+  end4[7] = loadImage("assets/end4_7.png");
+  end4[8] = loadImage("assets/end4_8.png");
+  end4[9] = loadImage("assets/end4_9.png");
   images['end4'] = end4
-  images['end4_test'] = loadImage("assets/end4_test.png");
+  // images['end4_test'] = loadImage("assets/end4_test.png");
+  images['endText4'] = loadImage("assets/endText1.png");
 
   images['retry0'] = loadImage("assets/retry0.png");
   images['retry1'] = loadImage("assets/retry1.png");
@@ -229,6 +240,8 @@ function setup() {
   levels.push(new Level8(images, sounds));
   levels.push(new Level9(images, sounds));
   levels.push(new Level10(images, sounds));
+  levels.push(new Level11(images, sounds));
+  levels.push(new Level12(images, sounds));
   
   // gameController
   gameController = new GameController(levels, images, fonts);

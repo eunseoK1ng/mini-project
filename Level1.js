@@ -143,13 +143,14 @@ class Level1 {
           this.end = true;
         }
         this.story += 1;
+        break;
+      case 11:
+        if(mouseX>663 && mouseX<786 && mouseY>10 && mouseY<49){
+          this.end = true;
+        }
+        this.story += 1;
         this.end = true;
         break;
-      // case 11:
-      //   this.story += 1;
-      //   this.end = true;
-      //   this.blur = 0;
-      //   break;
     }
   }
 
@@ -215,7 +216,7 @@ class Level1 {
         break;
       case 6:
         tint(255, 255);
-        this.makeBlur(5);
+        // this.makeBlur(5);
         this.makeStory(5);
         if (mouseX <= 772 && mouseX >= 708 && mouseY >= 512 && mouseY <= 570) {
           image(this.intro1, 0, 0);
@@ -223,7 +224,7 @@ class Level1 {
         break;
       case 7:
         tint(255, 255);
-        // this.makeBlur(6);
+        this.makeBlur(6);
         this.makeStory(6);
         if (mouseX <= 772 && mouseX >= 708 && mouseY >= 512 && mouseY <= 570) {
           image(this.intro1, 0, 0);
@@ -251,8 +252,13 @@ class Level1 {
           image(this.intro1, 0, 0);
         }
         break;
-      // case 11:
-      //   break;
+      case 11:
+        tint(255, 255);
+        this.makeStory(10);
+        if (mouseX <= 772 && mouseX >= 708 && mouseY >= 512 && mouseY <= 570) {
+          image(this.intro1, 0, 0);
+        }
+        break;
     }
     
   }
