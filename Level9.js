@@ -8,6 +8,7 @@ class Level9 {
     this.earnedCloth = 0;
     this.showend = false;
     this.end0 = sounds['end0'];
+    this.stage3 = sounds['stage3'];
   }
 
   init(score){

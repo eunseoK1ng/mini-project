@@ -14,7 +14,7 @@ class Level8 {
     this.end = false;
     this.startTime = millis();
     this.score = 0;
-    this.countDown = 10*1000;
+    this.countDown = 13*1000;
     this.blink2 = 50;
     this.clock = images['clock'];
   }
@@ -29,7 +29,7 @@ class Level8 {
     this.clothes = [];
     this.step = 0;
     this.end = false;
-    this.countDown = 10*1000;
+    this.countDown = 13*1000;
     this.blink2 = 50;
   }
 
@@ -131,7 +131,7 @@ class Level8 {
     this.miniCol.display();
 
     // throw cloth
-    if(frameCount % 60 == 0){
+    if(frameCount % 40 == 0){
       this.throwCloth();
     }
     // draw cloth
@@ -147,6 +147,9 @@ class Level8 {
     this.drawTimer();
     if(millis() - this.startTime > this.countDown){
       this.end = true;
+      if(this.stage3.isPlaying()){
+        this.stage3.stop();
+      }
     }
 
   }

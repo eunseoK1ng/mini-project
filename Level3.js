@@ -26,7 +26,7 @@ class Level3 {
     // monkey
     this.monCollider = new Collider(458, 442, 100, 166);
     this.monPos = [250, -142];
-    this.monSpeed = random(-5, -4);
+    this.monSpeed = random(-7, -6);
     // bird
     this.birdCollider = new Collider(620, 390, 140, 120);
     this.birdPos = [620, 390];
@@ -77,7 +77,7 @@ class Level3 {
     this.crocPos = [520, 190];
     this.crocSpeed = 3;
     this.monPos = [250, -142];
-    this.monSpeed = random(-5, -4);
+    this.monSpeed = random(-7, -6);
     this.birdPos = [620, 390];
     this.birdSpeed = [-1, -2];
     this.hurt = false;
@@ -311,10 +311,10 @@ class Level3 {
     // mon
     this.monPos[1] += this.monSpeed;
     if(this.monPos[1] < -100){
-      this.monSpeed = 5;
+      this.monSpeed = 8;
     }
     else if(this.monPos[1] > 400){
-      this.monSpeed = random(-5, -4);
+      this.monSpeed = random(-7, -6);
     }
     push();
     translate(this.monPos[0]-458, this.monPos[1]-442);

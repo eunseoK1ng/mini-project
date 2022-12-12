@@ -11,7 +11,7 @@ class Level5 {
     this.desImg = images['des'];
     // params
     this.end = false;
-    this.countDown = 1 * 1000;
+    this.countDown = 15 * 1000;
     // this.startTime = 0;
     this.startTime = millis();
     // items
@@ -21,7 +21,7 @@ class Level5 {
     this.desEat = false;
     this.eatTime;
     this.miniPos = [width/2, height-100];
-    this.miniSpeed = 7;
+    this.miniSpeed = 8;
     this.miniCol = new Collider(this.miniPos[0], this.miniPos[1], 132, 163);
     // score
     this.score = 0;
@@ -34,7 +34,7 @@ class Level5 {
 
   init(score){
     this.end = false;
-    this.countDown = 1 * 1000;
+    this.countDown = 15 * 1000;
     this.score = score;
     this.startTime = millis();
     this.items = [];

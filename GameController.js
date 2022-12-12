@@ -1,5 +1,5 @@
 class GameController {
-    constructor(levels, images){
+    constructor(levels, images, fonts){
         this.retry0 = images['retry0'];
         this.retry1 = images['retry1'];  
         this.levels = levels;
@@ -9,6 +9,8 @@ class GameController {
         this.cursor = images['cursor'];
         this.skip0 = images['skip0'];
         this.skip1 = images['skip1'];
+        this.digital = fonts['digital'];
+        this.nowKg = fonts['nowKg'];
     }
 
     init(){
@@ -28,19 +30,23 @@ class GameController {
     
     drawScore1(){
         textSize(40);
+        textFont(this.nowKg);
         fill(255);
-        stroke(0);
-        strokeWeight(3);
-        text(this.score + 'kg', width-120, 70);
+        stroke(66, 50, 24);
+        strokeWeight(5);
+        text('현재 몸무게 : ' + this.score + 'kg', width/2-150, 40);
+        fill(238, 112, 112);
+        text(this.score, width/2+30, 40);
     }
 
     drawScore2(){
-        textSize(60);
-        fill(255);
-        stroke(255);
+        textSize(70);
+        textFont(this.digital);
+        fill(253, 245, 20);
+        stroke(253, 245, 20);
         strokeWeight(1);
         let finalScore = (this.score-this.score%10)/100;
-        text(finalScore, width/2-100, height/2);
+        text(finalScore, width/2-130, height/2+15);
     }
 
     drawReturnButton(){

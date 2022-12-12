@@ -54,7 +54,7 @@ class Level10 {
             if (!this.end1.isPlaying()){
                 this.end1.play();
             }
-            image(this.end1Img, 0, 0);
+            // image(this.end1Img, 0, 0);
             if (frameCount % 10 == 0) {
                 image(this.end1Img[this.index % 2], 0, 0);
                 this.index++;
@@ -65,7 +65,7 @@ class Level10 {
                 this.end2.play();
                 // image(this.end2Img, 0, 0);
             }
-            image(this.end2Img, 0, 0);
+            // image(this.end2Img, 0, 0);
             if (frameCount % 10 == 0) {
                 image(this.end2Img[this.index % 3], 0, 0);
                 this.index++;
@@ -77,7 +77,7 @@ class Level10 {
                 this.end3.play();
                 // image(this.end3Img, 0, 0);
             }
-            image(this.end3Img, 0, 0);
+            // image(this.end3Img, 0, 0);
             if (frameCount % 10 == 0) {
                 image(this.end3Img[this.index % 3], 0, 0);
                 this.index++;
@@ -85,7 +85,7 @@ class Level10 {
     
         }
         else if(this.score > 15 && this.earnedCloth < 4){
-            print('bug');
+            // print('bug');
             if (!this.end4.isPlaying()){
                 this.end4.play();
                 image(this.end4Img[0], 0, 0);

@@ -1,6 +1,7 @@
 // assets
 let images = {};
 let sounds = {};
+let fonts = {};
 
 // gameController
 let gameController;
@@ -179,10 +180,14 @@ function preload(){
   //howToPlay
   let how = [];
   for(let i = 1; i <= 3; i++){
-    how[i] = loadImage("assets/level"+i+"_how.png")
+    how[i] = loadImage("assets/level"+i+"_how.png");
   }
   images['how'] = how;
-  images['camTest'] = loadImage("assets/stage3_pre.png")
+  images['camTest'] = loadImage("assets/stage3_pre.png");
+
+  // font
+  fonts['digital'] = loadFont('assets/DS_DIGI.TTF');
+  fonts['nowKg'] = loadFont('assets/HSGooltokki.ttf');
 
 }
 
@@ -226,7 +231,7 @@ function setup() {
   levels.push(new Level10(images, sounds));
   
   // gameController
-  gameController = new GameController(levels, images);
+  gameController = new GameController(levels, images, fonts);
   
 }
 
