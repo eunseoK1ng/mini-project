@@ -5,7 +5,7 @@ class Level10 {
     this.stageImg = images['stage3'];
     this.miniImg = images['lev3mini'];
     this.clothesImg = images['clothes'];
-    this.threshold = 40;
+    this.threshold = 80;
     this.cntThreshold = 30;
     this.miniPos = [999, 999];
     this.miniCol = new Collider(this.miniPos[0], this.miniPos[1], 130, 190);
@@ -22,7 +22,7 @@ class Level10 {
   init(score){
     this.startTime = millis();
     this.score = 100*score
-    this.threshold = 40;
+    this.threshold = 80;
     this.cntThreshold = 30;
     this.miniPos = [999, 999];
     this.miniCol = new Collider(this.miniPos[0], this.miniPos[1], 130, 190);

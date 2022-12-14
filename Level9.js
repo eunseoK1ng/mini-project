@@ -5,7 +5,7 @@ class Level9 {
         this.item = sounds['item'];
         this.camTest = images['camTest'];
         this.miniImg = images['lev3mini'];
-        this.threshold = 40;
+        this.threshold = 80;
         this.cntThreshold = 30;
         this.miniPos = [999, 999];
         this.end = false;
@@ -20,7 +20,7 @@ class Level9 {
       this.miniCol = new Collider(this.miniPos[0], this.miniPos[1], 130, 190);
       this.miniPos = [999, 999];
       this.step = 0;
-      this.threshold = 40;
+      this.threshold = 80;
       this.cntThreshold = 30;
     }
 

@@ -228,7 +228,7 @@ function setup() {
 
 
 
-  // levels
+  // // levels
   levels.push(new Level0(images, sounds));
   levels.push(new Level1(images, sounds));
   levels.push(new Level2(images, sounds));

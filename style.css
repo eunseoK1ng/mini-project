@@ -1,7 +1,17 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-image: url(./assets/back.png);
+  background-size: cover;
+}
+main{
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 canvas {
   display: block;
+  margin: 0 auto;
+  border: rgb(92, 63, 32) solid 5px;
+  border-radius: 10px;
 }
