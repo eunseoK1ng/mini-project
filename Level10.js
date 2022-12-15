@@ -14,7 +14,7 @@ class Level10 {
     this.end = false;
     this.startTime = millis();
     this.score = 0;
-    this.countDown = 13*1000;
+    this.countDown = 22*1000;
     this.blink2 = 50;
     this.clock = images['clock'];
   }
@@ -29,7 +29,7 @@ class Level10 {
     this.clothes = [];
     this.step = 0;
     this.end = false;
-    this.countDown = 13*1000;
+    this.countDown = 22*1000;
     this.blink2 = 50;
   }
 
@@ -131,7 +131,7 @@ class Level10 {
     this.miniCol.display();
 
     // throw cloth
-    if(frameCount % 60 == 0){
+    if(frameCount % 50 == 0){
       this.throwCloth();
     }
     // draw cloth
