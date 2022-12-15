@@ -54,7 +54,7 @@ class Level12 {
         // if (!this.end1.isPlaying()){
         //     this.end1.play();
         // }
-        if(this.score <= 15 && this.earnedCloth == 4){
+        if(this.score <= 15 && this.earnedCloth >= 4){
             if (!this.end1.isPlaying()){
                 this.end1.play();
             }
@@ -65,7 +65,7 @@ class Level12 {
             }
             image(this.endText1, 0, 0);
         }
-        else if(this.score > 15 && this.earnedCloth == 4){
+        else if(this.score > 15 && this.earnedCloth >= 4){
             if (!this.end2.isPlaying()){
                 this.end2.play();
                 // image(this.end2Img, 0, 0);
