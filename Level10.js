@@ -147,6 +147,7 @@ class Level10 {
     this.drawTimer();
     if(millis() - this.startTime > this.countDown){
       this.end = true;
+      this.clothes = [];
       if(this.stage3.isPlaying()){
         this.stage3.stop();
       }
