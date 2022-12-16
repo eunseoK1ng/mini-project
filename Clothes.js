@@ -10,9 +10,9 @@ class Clothes{
   initPosSpeed(){
     this.pos = [int(random(0, 2))*width, int(random(height-100, height))];
     if(this.pos[0] == 0){
-      this.speed = [random(15, 16), random(-30, -25)];
+      this.speed = [random(20, 21), random(-30, -25)];
     }else{
-      this.speed = [-random(15, 16), random(-30, -25)];
+      this.speed = [-random(20, 21), random(-30, -25)];
     }
   }
   
