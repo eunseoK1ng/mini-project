@@ -195,6 +195,7 @@ class Level6 {
         this.drawTimer();
         if(millis() - this.startTime > this.countDown){
           this.end = true;
+          this.items = [];
         }
 
         // if (this.vegEat){
