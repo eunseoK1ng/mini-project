@@ -131,7 +131,7 @@ class Level10 {
     this.miniCol.display();
 
     // throw cloth
-    if(frameCount % 50 == 0){
+    if(frameCount % 30 == 0){
       this.throwCloth();
     }
     // draw cloth
