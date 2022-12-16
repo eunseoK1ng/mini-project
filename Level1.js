@@ -170,7 +170,7 @@ class Level1 {
         }
         break;
       case 1:
-        this.makeBlur(1);
+//         this.makeBlur(1);
         this.makeStory(1);
         if (mouseX <= 772 && mouseX >= 708 && mouseY >= 512 && mouseY <= 570) {
           image(this.intro1, 0, 0);
@@ -192,7 +192,7 @@ class Level1 {
       case 3:
         this.eating.stop();
         tint(255, 255);
-        this.makeBlur(2);
+//         this.makeBlur(2);
         this.makeStory(2);
         if (mouseX <= 772 && mouseX >= 708 && mouseY >= 512 && mouseY <= 570) {
           image(this.intro1, 0, 0);
@@ -224,7 +224,7 @@ class Level1 {
         break;
       case 7:
         tint(255, 255);
-        this.makeBlur(6);
+//         this.makeBlur(6);
         this.makeStory(6);
         if (mouseX <= 772 && mouseX >= 708 && mouseY >= 512 && mouseY <= 570) {
           image(this.intro1, 0, 0);
@@ -239,7 +239,7 @@ class Level1 {
         break;
       case 9:
         tint(255, 255);
-        this.makeBlur(8);
+//         this.makeBlur(8);
         this.makeStory(8);
         if (mouseX <= 772 && mouseX >= 708 && mouseY >= 512 && mouseY <= 570) {
           image(this.intro1, 0, 0);
@@ -247,7 +247,8 @@ class Level1 {
         break;
       case 10:
         tint(255, 255);
-        this.makeBlur(9);
+//         this.makeBlur(9);
+        this.makeStory(9);
         if (mouseX <= 772 && mouseX >= 708 && mouseY >= 512 && mouseY <= 570) {
           image(this.intro1, 0, 0);
         }
